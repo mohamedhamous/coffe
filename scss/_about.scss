@@ -1,0 +1,127 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
+::selection {
+  background-color: $colorOrange;
+  color: $colorWihte;
+}
+.about {
+  width: 100%;
+  height: 500px;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 20px;
+  font-family: $font-family;
+  transition: 1s ease;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2,550px);
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+ 
+
+ 
+  .vidow{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.424),rgba(0, 0, 0, 0.637)) , url(../img/xb2.jpg.pagespeed.ic.TrRaz3pXkS.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 350px;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    position: relative;
+
+    img{
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: 
+      translate(-50%,-50%);
+    }
+  }
+  
+  .live-cofe{
+    width: 100%;
+    height: 350px;
+    &.dark-mode{
+      background-color: rgb(20 2 0 / 80%);
+      color: white;
+    }
+  
+    h6{
+      font-size: 15px;
+      margin-top: 30px;
+      color: $colorOrange;
+      margin-bottom: 5px;
+    }
+
+    h5{
+      width: 70%;
+      color: #222222;
+      margin-bottom: 15px;
+    }
+
+    p{
+      font-size: 16px;
+      color: #212529;
+      margin-bottom: 15px;
+    }
+
+    .p2{
+       color: $colorGrey;
+    }
+
+
+  }
+  
+}
+
+// start responsev About
+
+@media(max-width:1220px){
+  .about{
+    grid-template-columns: repeat(2,450px);
+    gap: 70px;
+
+    .live-cofe{
+      h5{
+        width: 100%;
+        font-size: 35px;
+      }
+    }
+  }
+}
+@media(max-width:1000px){
+  .about{
+    height: max-content;
+    grid-template-columns: repeat(1,80%);
+    row-gap: 30px;
+    
+    
+    .live-cofe{
+      height: max-content;
+      h5{
+        width: 100%;
+        // font-size: 35px;
+      }
+    }
+  }
+}
+@media(max-width:400px){
+  .about{
+    height: max-content;
+    row-gap: 20px;
+   
+    .live-cofe{
+      height: max-content;
+      h5{
+        width: 100%;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+// end responsev About

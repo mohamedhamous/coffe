@@ -1,0 +1,342 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
+::selection {
+    background-color: $colorOrange;
+    color: $colorWihte;
+  }
+  
+.review {
+    width: 100%;
+    height: max-content;
+    background-color: $backgroundOrange;
+    text-align: center;
+    font-family: $font-family;
+    position: relative;
+    overflow: hidden;
+    
+    .box{
+        div{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border-radius: 50%;
+            border: 2px solid $colorWihte;
+            animation: animatee linear infinite;
+            animation-duration: calc(200s / var(--i));
+
+
+
+        }
+        div:nth-child(1){
+            top: 12%;
+            left: 42%;
+        }
+        div:nth-child(2){
+            top: 70%;
+            left: 50%;
+            
+        }
+        div:nth-child(3){
+            top: 17%;
+            left: 6%;
+           
+        }
+        div:nth-child(4){
+            top: 20%;
+            left: 60%;
+           
+        }
+        div:nth-child(5){
+            top: 67%;
+            left: 10%;
+            
+        }
+        div:nth-child(6){
+            top: 80%;
+            left: 70%;
+           
+        }
+        div:nth-child(7){
+            top: 60%;
+            left: 80%;
+           
+        }
+        div:nth-child(8){
+            top: 32%;
+            left: 25%;
+            
+        }
+        div:nth-child(9){
+            top: 90%;
+            left: 25%;
+           
+        }
+        div:nth-child(10){
+            top: 20%;
+            left: 80%;
+            
+        }
+        div:nth-child(11){
+            top: 90%;
+            right: 5%;
+            
+        }
+        div:nth-child(12){
+            top: 50%;
+            right: 10%;
+            
+        }
+        div:nth-child(13){
+            top: 20%;
+            right: 50%;
+            
+        }
+        div:nth-child(14){
+            top: 50%;
+            right: 50%;
+           
+        }
+        div:nth-child(15){
+            top: 20%;
+            right: 90%;
+           
+        }
+        div:nth-child(16){
+            top: 70%;
+            right: 80%;
+           
+        }
+        div:nth-child(17){
+            top: 100%;
+            right: 40%;
+           
+        }
+        div:nth-child(18){
+            top: 100%;
+            right: 20%;
+           
+        }
+        div:nth-child(19){
+            top: 100%;
+            right: 90%;
+           
+        }
+        div:nth-child(20){
+            top: 90%;
+            right: 95%;
+           
+        }
+        div:nth-child(21){
+            top: 80%;
+            right: 50%;
+           
+        }
+        div:nth-child(22){
+            top: 40%;
+            right: 50%;
+           
+        }
+     
+        @keyframes animatee {
+            0%{
+                transform: scale(0) translateY(0) rotate(0); opacity:1;
+                
+            }
+            100%{
+                transform: scale(1.3) translateY(-300px) rotate(360deg);
+                opacity:0;
+
+            }
+        }
+    }
+    .d1 {
+        margin-top: 100px;
+        display: inline-block;
+
+        h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: $colorWihte;
+        }
+        p {
+            color: $colorWihte;
+        }
+    }
+
+    .d2 {
+        width: 80%;
+        height: max-content;
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(2, 550px);
+        justify-content: center;
+        column-gap: 50px;
+        margin-top: 50px;
+        text-align: left;
+
+        .lorem1,
+        .lorem2 {
+            img {
+                margin-bottom: 30px;
+            }
+
+            .stars {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+
+                h3 {
+                    margin-right: 30px;
+                    color: $colorWihte;
+                }
+
+                i {
+                    color: $colorWihte;
+                    margin-right: 3px;
+                    font-size: 13px;
+                }
+
+                .star1 {
+                    color: $starsOrange;
+                }
+            }
+
+            p {
+                color: $colorWihte;
+                line-height: 23px;
+            }
+        }
+    }
+
+    .d3 {
+        width: 100%;
+        height: max-content;
+        margin: auto;
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(4, 200px);
+        justify-content: center;
+        column-gap: 100px;
+        overflow: hidden;
+
+        .nums {
+            width: 80%;
+            height: 300px;
+
+            .num {
+                font-size: 100px;
+                color: $colorWihte;
+                font-weight: normal;
+            }
+
+            p {
+                color: $colorWihte;
+                margin-left: -30px;
+            }
+        }
+    }
+}
+
+// start responsev review
+@media (max-width: 660px) {
+    .review {
+        .d1 {
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .review {
+        .d1 {
+            h2 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .review {
+        .d2 {
+            grid-template-columns: repeat(2, 450px);
+        }
+
+        .d3 {
+            grid-template-columns: repeat(4, 170px);
+            column-gap: 100px;
+
+            .nums {
+                .num {
+                    font-size: 70px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .review {
+        .d2 {
+            grid-template-columns: repeat(1, 550px);
+            row-gap: 50px;
+        }
+
+        .d3 {
+            grid-template-columns: repeat(2, 170px);
+            column-gap: 150px;
+
+            .nums {
+                height: 170px;
+                .num {
+                    font-size: 70px;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .review {
+        .d2 {
+            grid-template-columns: repeat(1, 450px);
+            
+        }
+
+        .d3 {
+            grid-template-columns: repeat(1, 170px);
+            justify-content: center;
+            align-items: center;
+            .nums{
+                width: 100%;
+                height: 200px;
+            }
+            
+
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .review {
+        .d2 {
+            grid-template-columns: repeat(1, 100%);
+            
+        }
+
+        .d3 {
+            grid-template-columns: repeat(1, 100%);
+
+
+        }
+    }
+}
+
+// end responsev review
